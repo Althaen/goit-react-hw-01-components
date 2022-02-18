@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Althaen/goit-react-hw-01-components/static/css/main.7acaea2f.css",
+    "main.js": "/Althaen/goit-react-hw-01-components/static/js/main.c6cf91e8.js",
+    "static/js/787.a6d51bb8.chunk.js": "/Althaen/goit-react-hw-01-components/static/js/787.a6d51bb8.chunk.js",
+    "index.html": "/Althaen/goit-react-hw-01-components/index.html",
+    "main.7acaea2f.css.map": "/Althaen/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
+    "main.c6cf91e8.js.map": "/Althaen/goit-react-hw-01-components/static/js/main.c6cf91e8.js.map",
+    "787.a6d51bb8.chunk.js.map": "/Althaen/goit-react-hw-01-components/static/js/787.a6d51bb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.c6cf91e8.js"
+  ]
+}
