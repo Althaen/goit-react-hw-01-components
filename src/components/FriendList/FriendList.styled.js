@@ -20,17 +20,9 @@ background-color: #FFF;
 &:not(:last-child) {margin-bottom: 5px;}
 padding-left: 8px;
 `
-export const StatusIsOffline = styled.span`
+export const Status = styled.span`
 display: block;
-background-color: red;
-width: 8px;
-height: 8px;
-border-radius: 50%;
-margin-right: 8px;
-`
-export const StatusIsOnline = styled.span`
-display: block;
-background-color: green;
+background-color: ${(props) => {return props.isOnline ? `green` : `red` }};
 width: 8px;
 height: 8px;
 border-radius: 50%;

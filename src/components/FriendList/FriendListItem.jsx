@@ -1,8 +1,8 @@
-import { FriendListItemContainer, StatusIsOffline, StatusIsOnline, Name } from "."
+import { FriendListItemContainer, Status, Name } from "."
 
 export default function FriendListItem({isOnline, avatar, name}) {
       return  <FriendListItemContainer className="item">
-      {isOnline ? <StatusIsOnline></StatusIsOnline> : <StatusIsOffline></StatusIsOffline>}
+      <Status isOnline={isOnline}></Status>
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
       <Name className="name">{name}</Name>
     </FriendListItemContainer>}
