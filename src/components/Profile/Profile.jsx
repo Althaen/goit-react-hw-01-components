@@ -1,7 +1,7 @@
 import { ProfileContainer, Avatar, Description, Name, Tag, Location, ProfileStats, ProfileStatsItem, Label, Quantity } from "./Profile.styled"
 import PropTypes from 'prop-types'
 
-export default function Profile({username, tag, location, avatar, stats}) {
+export default function Profile({username, tag, location, avatar, stats:{followers, views, likes}}) {
   return <ProfileContainer className="profile">
   <Description className="description">
     <Avatar
@@ -17,15 +17,15 @@ export default function Profile({username, tag, location, avatar, stats}) {
   <ProfileStats className="stats">
     <ProfileStatsItem>
       <Label className="label">Followers</Label>
-      <Quantity className="quantity">{stats.followers}</Quantity>
+      <Quantity className="quantity">{followers}</Quantity>
     </ProfileStatsItem>
     <ProfileStatsItem>
       <Label className="label">Views</Label>
-      <Quantity className="quantity">{stats.views}</Quantity>
+      <Quantity className="quantity">{views}</Quantity>
     </ProfileStatsItem>
     <ProfileStatsItem>
       <Label className="label">Profile</Label>
-      <Quantity className="quantity">{stats.likes}</Quantity>
+      <Quantity className="quantity">{likes}</Quantity>
     </ProfileStatsItem>
   </ProfileStats>
 </ProfileContainer>

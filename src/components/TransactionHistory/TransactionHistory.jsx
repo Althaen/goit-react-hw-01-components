@@ -1,9 +1,8 @@
-import TransactionItem from './TransactionItem';
-import { TransactionTable, TransactionTableHead } from './TransactionHistory.styled';
+// import TransactionItem from './TransactionItem';
+import { TransactionTable, TransactionTableHead, Transaction } from './TransactionHistory.styled';
 import PropTypes from 'prop-types'
 
 export default function TransactionHistory({ items }) {
-  // {type, amount, currency, id}
   return <TransactionTable className="transaction-history">
       <TransactionTableHead>
         <tr>
@@ -16,14 +15,12 @@ export default function TransactionHistory({ items }) {
       <tbody>
         {items.map(({ id, type, amount, currency }) => {
           return (
-            
-            <TransactionItem
-              key={id}
-              type={type}
-              amount={amount}
-              currency={currency}
-            />
-          );
+            <Transaction>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
+          </Transaction>
+          )
         })}
       </tbody>
     </TransactionTable>

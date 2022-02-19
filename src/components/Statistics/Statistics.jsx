@@ -1,14 +1,14 @@
-import StatisticsItem from "./StatisticsItem"
-import {StatisticsTitle, StatContainer, StatList} from './Statistics.styled'
+import {StatisticsTitle, StatContainer, StatList, StatListItem, Label, Percentage} from './Statistics.styled'
 import PropTypes from 'prop-types'
 
 export default function Statistics({title, stats}) {
    return <StatContainer className="statistics">
-  <StatisticsTitle className="title">{title}</StatisticsTitle>
-
+{title && <StatisticsTitle className="title">{title}</StatisticsTitle>}
   <StatList className="stat-list">
-    {stats.map(item => <StatisticsItem key={item.id} label={item.label} percentage={item.percentage} />
-    )}
+    {stats.map(({id, label, percentage}) => <StatListItem className="item" key={id}>  
+      <Label className="label">{label}</Label>
+      <Percentage className="percentage">{percentage}%</Percentage>
+    </StatListItem>)}
   </StatList>
 </StatContainer>
 }
